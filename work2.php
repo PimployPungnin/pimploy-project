@@ -46,14 +46,22 @@ session_start();
             <option value="study">--เรื่องเรียน--</option>
     </select>
     <div style="float:right">
+        <?php echo"ผู้ใช้งานระบบ : $_SESSION[username]";?>&nbsp;&nbsp;
         <a href="logout.php">ออกจากระบบ</a>
     </div>
+    <a href = "newpost.php">สร้างกระทู้ใหม่</a>
     <br>
-    <form action="post.php" method="get">
-    <?php 
-        for($i=1;$i<=10;$i++){
-            echo "<li><a href='post.php?id=$i'>กระทู้ $i</a></li>";
-        }
+    <ul>
+        <form action="post.php" method="get">
+        <?php 
+             for($i=1;$i<=10;$i++){
+                echo "<li>";
+                echo "<a href='post.php?id=$i'>กระทู้ที่ $i</a>";
+                if($_SESSION['role']=='a'){
+                    echo "&nbsp;&nbsp;<a href='delete.php?id=$_i'>ลบ</a>";
+                }
+                echo "</li>";
+            }
     ?>
     </form>
 </body>
