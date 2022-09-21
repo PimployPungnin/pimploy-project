@@ -1,5 +1,9 @@
 <<?php
 session_start();
+    if(isset($_SESSION['id'])){
+        header("location:work2.php");
+        die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +53,7 @@ session_start();
         <?php echo"ผู้ใช้งานระบบ : $_SESSION[username]";?>&nbsp;&nbsp;
         <a href="logout.php">ออกจากระบบ</a>
     </div>
+    <br>
     <a href = "newpost.php">สร้างกระทู้ใหม่</a>
     <br>
     <ul>
@@ -56,9 +61,9 @@ session_start();
         <?php 
              for($i=1;$i<=10;$i++){
                 echo "<li>";
-                echo "<a href='post.php?id=$i'>กระทู้ที่ $i</a>";
+                echo "<a href='post.php?id=$i'>กระทู้ $i</a>";
                 if($_SESSION['role']=='a'){
-                    echo "&nbsp;&nbsp;&nbsp;<a href = delete.php?id=$_i>ลบ</a>";
+                    echo "&nbsp;&nbsp;&nbsp;<a href = 'delete.php?id=$_i'>ลบ</a>";
                 }
                 echo "</li>";
             }
