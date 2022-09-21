@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 align="center">Webboard Commend</h1>
+    <h1 align="center">Webboard GGEZ</h1>
     <hr>
     <div align="center">
         ต้องการดูกระทู้หมายเลข 
