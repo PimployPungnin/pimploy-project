@@ -58,7 +58,7 @@ session_start();
                 echo "<li>";
                 echo "<a href='post.php?id=$i'>กระทู้ที่ $i</a>";
                 if($_SESSION['role']=='a'){
-                    echo "&nbsp;&nbsp;<a href='delete.php?id=$_i'>ลบ</a>";
+                    echo "&nbsp;&nbsp;&nbsp;<a href = delete.php?id=$_i>ลบ</a>";
                 }
                 echo "</li>";
             }
