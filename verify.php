@@ -7,11 +7,20 @@
     <title>Verify</title>
 </head>
 <body>
-    <h1><center>Webboard GGEZ</center></h1>
+    <h1 align="center">Webboard</h1>
     <hr>
     <div align="center">
-        เข้าสู้ระบบด้วย <br>
-        Login = <?php echo $_POST["Login"];?> <br>
-        Password = <?php echo $_POST["Password"];?>
+        <?php
+            $login=$_POST['login'];
+            $pwd=$_POST['pwd'];
+            if($login=="admin" && $pwd=="admin123")
+                echo "ยินดีต้อนรับ Admin";
+            elseif($login=="member" && $pwd=="mem1234")
+                echo "ยินดีต้อนรับ Member";
+            else
+                echo "User Password ไม่ถูกต้อง";
+            echo "<br><a href='index.php'>กลับสู่หน้าหลัก</a>";
+            ?>
+    </div>
 </body>
 </html>

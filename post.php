@@ -10,7 +10,7 @@
     <h1><center>Webboard GGEZ</center></h1>
     <hr>
     <div align="center">
-        ต้องการกระทู้หมายเลข 3 <br>
+        ต้องการกระทู้หมายเลข <?php echo $_GET["id"];?><br>
     <table style="border: 2px solid black; width: 40%;" align="center"> <br>
         <tr><td style="background-color: #6CD2FE;">แสดงความคิดเห็น</td></tr>
         <tr><td><textarea name="" id="" cols="80" rows="3"></textarea></td></tr>
