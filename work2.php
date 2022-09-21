@@ -17,7 +17,7 @@
             <option value="general">เรื่องทั่วไป</option>
             <option value="study">เรื่องเรียน</option>
         </select>
-        <a href="login.html" style="float: right;">เข้าสู่ระบบ</a>
+        <a href="login.php" style="float: right;">เข้าสู่ระบบ</a>
         <br>
         <ul>
             <li><a href="post.php?id=1">กระทู้ที่ 1</a></li>
