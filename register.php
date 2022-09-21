@@ -20,6 +20,6 @@
         <tr><td>อีเมล :</td><td><input type="text" name="name" size="60"></td></tr>
         <tr><td colspan="2" align="center"><input type="submit" value="สมัครสมาชิก" ></td></tr>
     </table>
-    <br><center><a href="work2.html">กลับไปยังหน้าหลัก </a></center>
+    <br><center><a href="work2.php">กลับไปยังหน้าหลัก </a></center>
 </body>
 </html>
