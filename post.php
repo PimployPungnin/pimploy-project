@@ -29,7 +29,7 @@
         </tr>
     </table>
     <br>
-    <a href="work2.html" align="center">กลับสู่หน้าหลัก</a>
+    <a href="work2.php" align="center">กลับสู่หน้าหลัก</a>
     </div>
 </body>
 </html>
