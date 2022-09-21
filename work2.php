@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webboard</title>
+    <title>Webboard GGEZ</title>
 </head>
+<?php
+    if(!isset($_SESSION['id'])){
+?>
 <body>
-    <h1 style="text-align: center;">Webboard</h1>
+    <h1 style="text-align: center;">Webboard GGEZ</h1>
     <hr>
     หมวดหมู่:
         <select name="category">
@@ -15,7 +18,9 @@
             <option value="general">--เรื่องทั่วไป--</option>
             <option value="study">--เรื่องเรียน--</option>
     </select>
-    <a href="login.html" style="float: right">เข้าสู่ระบบ</a>
+    <div style="float:right">
+        <a href="logout.html">ออกจากระบบ</a>
+    </div>
     <br>
     <form action="post.php" method="get">
     <?php 
@@ -25,4 +30,7 @@
     ?>
     </form>
 </body>
+<?php
+    }
+?>
 </html>
