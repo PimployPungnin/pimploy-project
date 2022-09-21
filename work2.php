@@ -1,9 +1,5 @@
 <<?php
 session_start();
-    if(isset($_SESSION['id'])){
-        header("location:work2.php");
-        die();
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
