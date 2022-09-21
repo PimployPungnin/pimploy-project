@@ -20,6 +20,6 @@
         <tr><td colspan="2" align="center"><input type="submit" value="Login" ></td></tr>
     </table>
     </form>
-    <br> <center>ถ้ายังไม่ได้เป็นสมาชิก <a href="register.html">กรุณาสมัครสมาชิก</a></center>
+    <br> <center>ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาชิก</a></center>
 </body>
 </html>
