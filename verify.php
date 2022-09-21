@@ -12,10 +12,10 @@
     <div align="center">
         <?php
             $login=$_POST['login'];
-            $pwd=$_POST['pwd'];
-            if($login=="admin" && $pwd=="admin123")
+            $password=$_POST['password'];
+            if($login=="admin" && $password=="admin123")
                 echo "ยินดีต้อนรับ Admin";
-            elseif($login=="member" && $pwd=="mem1234")
+            elseif($login=="member" && $password=="mem1234")
                 echo "ยินดีต้อนรับ Member";
             else
                 echo "User Password ไม่ถูกต้อง";
