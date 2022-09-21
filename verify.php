@@ -15,8 +15,14 @@
             $password=$_POST['password'];
             if($login=="admin" && $password=="admin123")
                 echo "ยินดีต้อนรับ Admin";
+                $_SESSION['username']='admin';
+                $_SESSION['role']='a';
+                $_SESSION['id']=session_id();
             elseif($login=="member" && $password=="mem1234")
                 echo "ยินดีต้อนรับ Member";
+                $_SESSION['username']='member';
+                $_SESSION['role']='a';
+                $_SESSION['id']=session_id();
             else
                 echo "User Password ไม่ถูกต้อง";
             echo "<br><a href='index.php'>กลับสู่หน้าหลัก</a>";
