@@ -1,3 +1,6 @@
+<<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,21 +14,23 @@
     <hr>
     <div align="center">
         <?php
-            $login=$_POST['login'];
-            $password=$_POST['password'];
-            if($login=="admin" && $password=="admin123")
+            $Login=$_POST['Login'];
+            $Password=$_POST['Password'];
+            if($Login=="admin" && $Password=="admin123"){
                 echo "ยินดีต้อนรับ Admin";
                 $_SESSION['username']='admin';
                 $_SESSION['role']='a';
                 $_SESSION['id']=session_id();
-            elseif($login=="member" && $password=="mem1234")
+            }
+            elseif($Login=="member" && $Password=="mem1234"){
                 echo "ยินดีต้อนรับ Member";
                 $_SESSION['username']='member';
-                $_SESSION['role']='a';
+                $_SESSION['role']='m';
                 $_SESSION['id']=session_id();
+            }
             else
                 echo "User Password ไม่ถูกต้อง";
-            echo "<br><a href='index.php'>กลับสู่หน้าหลัก</a>";
+            echo "<br><a href='work2.php'>กลับสู่หน้าหลัก</a>";
             ?>
     </div>
 </body>
