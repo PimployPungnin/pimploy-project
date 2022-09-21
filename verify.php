@@ -7,7 +7,7 @@
     <title>Verify</title>
 </head>
 <body>
-    <h1 align="center">Webboard</h1>
+    <h1 align="center">Webboard GGEZ</h1>
     <hr>
     <div align="center">
         <?php
