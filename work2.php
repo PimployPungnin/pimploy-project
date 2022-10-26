@@ -40,12 +40,9 @@ session_start();
 <br>
 <table class="table table-striped">
     <?php 
-        for($i=1;$i<=10;$i++){
-            echo "<tr><td><a href= post.php?id=$i style=text-decoration:none> กระทู้ที่ $i</a></td></tr>";
-            if($_SESSION['role']=='a'){
-                echo "<td><a href = delete.php?>"
-            }
-        }
+       for($i=1;$i<=10;$i++){
+        echo "<tr><td><a href=post.php?id=$i style=text-decoration:none>กระทู้ $i </a></td>";
+    }
     ?>
 </table>
     </div>
@@ -54,36 +51,33 @@ session_start();
     }else{
 ?>
 <body>
-    <div class="container">
-        <h1 style="text-align: center;">Webboard GGEZ</h1>
-        <?php include "nav.php";?>
-    <hr>
-    หมวดหมู่:
-        <select name="category">
-            <option value="all">--ทั้งหมด--</option>
-            <option value="general">--เรื่องทั่วไป--</option>
-            <option value="study">--เรื่องเรียน--</option>
-    </select>
-    <div style="float:right">
-        <?php echo"ผู้ใช้งานระบบ : $_SESSION[username]";?>&nbsp;&nbsp;
-        <a href="logout.php">ออกจากระบบ</a>
+<div class="d-flex">
+        <div>
+            <label>หมวดหมู่</label>
+            <span class="dropdown">
+                <button class="btn btn-light dropdown-toggle btn-sm"
+                    type="button" id="button2" data-bs-toggle="dropdown"
+                    aria-expanded="false">--ทั้งหมด--</button>
+                <ul class="dropdown-menu" aria-labelledby="button1">
+                    <li><a href="#" class="dropdown-item">เข้าสู่ระบบ</a></li>
+                    <li><a href="#" class="dropdown-item">เรื่องทั่วไป</a></li>
+                    <li><a href="#" class="dropdown-item">เรื่องเรียน</a></li>
+                </ul>
+            </span>
+        </div>
     </div>
-    <br>
-    <a href = "newpost.php">สร้างกระทู้ใหม่</a>
-    <br>
-    <ul>
-        <form action="post.php" method="get">
-        <?php 
-             for($i=1;$i<=10;$i++){
-                echo "<li>";
-                echo "<a href='post.php?id=$i'>กระทู้ $i</a>";
-                if($_SESSION['role']=='a'){
-                    echo "&nbsp;&nbsp;<a href = 'delete.php?id=$i'>ลบ</a>";
-                }
-                echo "</li>";
-            }
+<br>
+<table class="table table-striped">
+    <?php 
+       for($i=1;$i<=10;$i++){
+        echo "<tr><td><a href=post.php?id=$i style=text-decoration:none>กระทู้ $i </a></td>";
+        if($_SESSION['role']=='a'){
+            echo "<td><a href=delete.php?id=$i class='btn btn-danger btn-sm'><i class='bi bi-trash'></i></a></td>";
+        }
+        echo "</tr>";
+    }
     ?>
-    </form>
+</table>
     </div>
 </body>
 <?php

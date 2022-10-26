@@ -20,33 +20,41 @@ session_start();
 </head>
 <body>
     <div class=container>
-    <h1><center>Webboard GGEZ</center></h1>
+    <h1 style="text-align: center;">Webboard GGEZ</h1>
     <?php include "nav.php" ?>
     <br>
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
+            <?php
+            if(isset($_SESSION['error'])){
+                echo "<div class='alert alert-danger'>ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</div>";
+                unset($_SESSION['error']);
+            }
+            ?>
+            <div class="card text-dark bg-light">
             <div class="card-header">เข้าสู่ระบบ</div>
             <div class="card-body">
                 <form action="verify.php" method="post">
-                    <div class="from-group">
-                        <label>Login:</label>
-                        <input type="text" name="login" class="form-content">
+                    <div class="from-group mb-2">
+                        <label class="form-label">Login:</label>
+                        <input type="text" name="login" class="form-control">
                     </div>
+                    <div class="from-group mb-3">
+                        <label class="form-label">Password:</label>
+                        <input type="password" name="pwd" class="form-control">
+                    </div>
+                    <center>
+                        <button type="submit" class="btn btn-secondary btn-sm">Login</button>
+                    </center>
                 </form>
             </div>
         </div>
+    </div>
         <div class="col-md-4"></div>
     </div>
-    <form action="verify.php" method="post">
-    <table style="border: 2px solid black; width: 40%;" align="center">
-        <tr><td style="background-color: #6CD2FE;" colspan="2">เข้าสู่ระบบ</td></tr>
-        <tr><td>Login</td><td><input type="text" name="Login" size="60"></td></tr>
-        <tr><td>Password</td><td><input type="password" name="Password" size="60"></td></tr>
-        <tr><td colspan="2" align="center"><input type="submit" value="Login" ></td></tr>
-    </table>
-    </form>
-    <br> <center>ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาชิก</a></center>
-    </div>
+    <br>
+    <div align="center">ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาลงทะเบียน</a></div>
+</div>
 </body>
 </html>
