@@ -3,5 +3,5 @@
     session_destroy();
     header("location:work2.php");
     die();
-
+    
 ?>
