@@ -7,7 +7,7 @@ session_start();
     $email = $_POST['email'];
 
     $conn = new PDO("mysql:host=localhost;dbname=webbord;charset=utf8", "root", "");
-
+    $password=sha1($password);
     $sql = "SELECT * FROM user where login='$login'";
     $result = $conn->query($sql);
     if($result->rowCount()==1){
